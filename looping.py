@@ -64,3 +64,36 @@ print(anyS)
 '''
 allX=all("t" not in x for x in phrase.lower())
 print(allX)
+
+
+'''
+Raymond Kim
+1/18/2018
+List Comprehension and Set-Builder Notation
+'''
+
+#6
+#a)
+sentence="This is a sentence with words in it."
+S={word.replace(".","") for word in sentence.split(" ")}
+print(S)
+
+#b)
+iwords={word for word in S if "i" in word}
+print(iwords)
+
+#7
+setBetween1and1000={x for x in range(1,1001) if 100 < x**3 < 450}
+print(setBetween1and1000)
+
+#8
+U={x**2 - x for x in range(1,11) if 100 < x**3 < 450}
+print(U)
+
+#9
+sentence2="I could not, under the circumstances, wish for anything better!"
+S2=[word.replace("!","").replace(",","") for word in sentence2.split(" ")]
+print(S2)
+
+iwords2=[word2 for word2 in S2 if "i" in word2.lower()]
+print(iwords2)
