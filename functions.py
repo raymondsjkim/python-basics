@@ -50,3 +50,41 @@ def mySum(*X):
 print(mySum(*[1,2]), mySum(1,2,3), mySum(1,2,3,4,5))
 
 print(mySum(*range(1001)))
+
+#Functions in Functions
+
+def f(k):
+    return k**2 + 2*k + 1
+
+def g(k):
+    return k**3 - k
+
+def sumUp(start,end,F):
+    return sum([F(k) for k in range(start,end+1)])
+
+print(sumUp(0,10,f))
+print(sumUp(0,10,g))
+
+
+'''
+The code above generates the results for the summations:
+
+ _10_
+ \    k^2 + 2k + 1
+ /___
+ k = 0
+
+ AND
+
+  _10_
+ \    k^3 - k
+ /___
+ k = 0
+ 
+'''
+
+#Advanced Feature
+def sumUp(start,end,F):
+    return sum([F(k) for k in range(start,end+1)])
+
+print(sumUp(0,10,lambda k: k**4-2*k**3 + 5))
