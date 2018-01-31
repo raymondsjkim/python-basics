@@ -38,3 +38,15 @@ def goodVibes(x,name="Dr C"):
 
 goodVibes(3)
 goodVibes(75,name="Timmy")
+
+
+#Variadic Functions
+def mySum(*X):
+    s=0
+    for x in X:
+        s+=x
+    return s
+
+print(mySum(*[1,2]), mySum(1,2,3), mySum(1,2,3,4,5))
+
+print(mySum(*range(1001)))
