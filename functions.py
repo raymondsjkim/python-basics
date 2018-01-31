@@ -1,4 +1,5 @@
 
+#Functions
 def square(x):
     return x**2
 
@@ -22,6 +23,8 @@ def doubleIt(s):
 print(doubleIt(3))
 print(doubleIt("cat"))
 
+
+#Keyword Arguments
 def sayHi(name="Jeff",age=24):
     print("Hi",name)
     print("You are",age,"years old.")
