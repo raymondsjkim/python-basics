@@ -21,3 +21,17 @@ def doubleIt(s):
 
 print(doubleIt(3))
 print(doubleIt("cat"))
+
+def sayHi(name="Jeff",age=24):
+    print("Hi",name)
+    print("You are",age,"years old.")
+
+sayHi()
+sayHi(age=36)
+sayHi(age=15,name="Chadworth")
+
+def goodVibes(x,name="Dr C"):
+    print(name,"is sending you",x,"many good vibes.")
+
+goodVibes(3)
+goodVibes(75,name="Timmy")
